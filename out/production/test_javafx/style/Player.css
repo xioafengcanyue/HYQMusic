@@ -1,0 +1,76 @@
+
+#musicSlider .thumb{
+    -fx-background-color:#1ed0a0;
+}
+.button{
+    -fx-background-color: none;
+}
+
+#playBtn{
+    -fx-background-color: none;
+    -fx-background-image: url(../imgsource/play.png);
+    -fx-background-position: center center;
+}
+#preBtn{
+    -fx-background-color: none;
+    -fx-background-image: url(../imgsource/pre1.png);
+    -fx-background-position: center center;
+}
+#nextBtn{
+    -fx-background-color: none;
+    -fx-background-image: url(../imgsource/nect1.png);
+    -fx-background-position: center center;
+
+}
+#listBtn{
+    -fx-background-color: none;
+    /*-fx-background-image: url(../imgsource/列表1.png);*/
+    -fx-background-position: center center;
+}
+#updownBtn{
+    -fx-background-color: none;
+    -fx-background-image: url(../imgsource/upload1.png);
+    -fx-background-position: center center;
+}
+.list-view{
+    -fx-background-color: none;
+    -fx-border-width: none;
+}
+#minBtn{
+    -fx-background-image: url(../imgsource/min1.png);
+}
+#minBtn:hover{
+    -fx-background-image: url(../imgsource/min2.png);
+}
+#maxBtn{
+    -fx-background-image: url(../imgsource/max1.png);
+}
+#maxBtn:hover{
+    -fx-background-image: url(../imgsource/max2.png);
+}
+#closeBtn{
+    -fx-background-image: url(../imgsource/close1.png);
+}
+#closeBtn:hover{
+    -fx-background-image: url(../imgsource/close2.png);
+}
+.text-field{
+    /*-fx-background-color: none;*/
+    -fx-border-radius: 50px;
+}
+.text-field:focused{
+    -fx-border-color: none;
+}
+#backToMain{
+    -fx-background-image: url(../imgsource/turndown1.png);
+}
+#backToMain:hover{
+    -fx-background-image: url(../imgsource/turndown2.png);
+}
+#blackBack{
+    -fx-background-color: #0000009d;
+}
+#searchLine{
+    -fx-background-color: #E3E3E3;
+    -fx-border-radius: 20px;
+}

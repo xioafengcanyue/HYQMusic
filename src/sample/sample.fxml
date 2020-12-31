@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1422.0" prefWidth="1023.0" style="-fx-background-color: white;" stylesheets="@../style/Player.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane layoutX="7.0" layoutY="3.0" prefHeight="14.0" prefWidth="1016.0" style="-fx-background-color: white;" />
+      <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="175.0" spacing="10.0" style="-fx-background-color: #F0F0F0;">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgsource/hyqmusci.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label prefHeight="42.0" prefWidth="124.0" text="在线音乐" textFill="#a49797" />
+            <Button fx:id="btn1" mnemonicParsing="false" onAction="#setMusicPro" prefHeight="34.0" prefWidth="175.0" stylesheets="@../style/Player.css" text="音乐馆">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="btn2" mnemonicParsing="false" prefHeight="34.0" prefWidth="178.0" text="视频">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="btn21" mnemonicParsing="false" prefHeight="34.0" prefWidth="178.0" text="电台">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label prefHeight="42.0" prefWidth="124.0" text="本地音乐" textFill="#a49797" />
+            <Button fx:id="btn2111" mnemonicParsing="false" prefHeight="34.0" prefWidth="178.0" text="我喜欢">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn211" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="153.0" style="-fx-background-color: #1ECE9B; -fx-border-radius: 5px;" text="本地歌曲" textFill="#f8f8f8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn2112" mnemonicParsing="false" prefHeight="34.0" prefWidth="178.0" text="播放历史">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <HBox alignment="TOP_CENTER" layoutX="175.0" layoutY="15.0" prefHeight="50.0" prefWidth="848.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="85.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin></Button>
+            <TextField fx:id="searchLine" prefHeight="34.0" prefWidth="179.0" promptText="搜索音乐" stylesheets="@../style/Player.css">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin></TextField>
+            <Label prefHeight="39.0" prefWidth="432.0" />
+            <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minStage" prefHeight="25.0" prefWidth="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="maxBtn" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeStage" prefHeight="25.0" prefWidth="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="176.0" layoutY="618.0" prefHeight="83.0" prefWidth="848.0" style="-fx-background-color: white;">
+         <children>
+            <Slider fx:id="musicSlider" onMousePressed="#setSliderTouch" onMouseReleased="#setNewPlayTime" stylesheets="@../style/Player.css" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="887.0">
+               <children>
+                  <ImageView fx:id="musicImg" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#showLyric" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ImageView>
+                  <Label fx:id="musicInfo" prefHeight="46.0" prefWidth="172.0" text="暂无歌曲" textFill="#403636c9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="58.0" prefWidth="34.0" />
+                  <Button fx:id="preBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../style/Player.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="playBtn" mnemonicParsing="false" onAction="#switchPlayStatus" prefHeight="50.0" prefWidth="50.0" stylesheets="@../style/Player.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="nextBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../style/Player.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="30.0" top="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../imgsource/volum.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="volumSlider" max="1.0" prefHeight="18.0" prefWidth="81.0" value="0.4" />
+                  <Label prefHeight="36.0" prefWidth="24.0" />
+                  <Label fx:id="timeLabel" prefHeight="26.0" prefWidth="98.0" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #BBBBBB;" text="00:00 / 00:00" />
+                  <Button fx:id="listBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" stylesheets="@../style/Player.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="updownBtn" mnemonicParsing="false" onAction="#openFile" prefHeight="25.0" prefWidth="25.0" stylesheets="@../style/Player.css">
+                     <HBox.margin>
+                        <Insets left="10.0" right="40.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ListView fx:id="musicList" layoutX="211.0" layoutY="182.0" prefHeight="434.0" prefWidth="784.0" stylesheets="@../style/Player.css" />
+      <Label layoutX="198.0" layoutY="65.0" prefHeight="90.0" prefWidth="145.0" style="-fx-background-color: white;" text="本地歌曲" textAlignment="CENTER">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="155.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: white;" text="歌曲" textFill="#aeaeae">
+         <font>
+            <Font name="Microsoft YaHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="610.0" layoutY="155.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: white;" text="歌手" textFill="#aeaeae">
+         <font>
+            <Font name="Microsoft YaHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="749.0" layoutY="155.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: white;" text="专辑" textFill="#aeaeae">
+         <font>
+            <Font name="Microsoft YaHei" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="910.0" layoutY="155.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: white;" text="大小" textFill="#aeaeae">
+         <font>
+            <Font name="Microsoft YaHei" size="14.0" />
+         </font>
+      </Label>
+      <Pane fx:id="lyricPane" layoutY="721.0" prefHeight="701.0" prefWidth="1023.0">
+         <children>
+            <ImageView fx:id="lyricBackImg" fitHeight="701.0" fitWidth="1023.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="blackBack" prefHeight="701.0" prefWidth="1023.0" stylesheets="@../style/Player.css" />
+            <ImageView fx:id="lyricImg" fitHeight="346.0" fitWidth="366.0" layoutX="116.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="backToMain" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#closeLyric" prefHeight="25.0" prefWidth="30.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane fx:id="lrcPane" layoutX="500.0" layoutY="221.0" maxHeight="280.0" maxWidth="450.0" prefHeight="280.0" prefWidth="450.0" />
+            <Label fx:id="lrcName" alignment="CENTER" layoutX="529.0" layoutY="87.0" prefHeight="58.0" prefWidth="395.0" text="歌曲名" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lrcSinger" alignment="CENTER" layoutX="640.0" layoutY="165.0" prefHeight="23.0" prefWidth="172.0" text="歌手：" textFill="#aeaeae">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="lrcAlbum" alignment="CENTER" layoutX="639.0" layoutY="188.0" prefHeight="23.0" prefWidth="172.0" text="专辑：" textFill="#aeaeae">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

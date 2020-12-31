@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="765.0" spacing="10.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MusicItemController">
+   <children>
+      <Button id="heart" fx:id="heart" mnemonicParsing="false" onAction="#setLover" prefHeight="30.0" prefWidth="30.0" stylesheets="@../style/musicItem.css">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </Button>
+      <Label fx:id="musicName" onMouseClicked="#setThisPlay" prefHeight="76.0" prefWidth="193.0" text="涅槃" textFill="#000000c9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="singer" onMouseClicked="#setThisPlay" prefHeight="49.0" prefWidth="130.0" text="涅槃" textFill="#000000c9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="album" onMouseClicked="#setThisPlay" prefHeight="40.0" prefWidth="153.0" text="涅槃" textFill="#000000c9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="size" prefHeight="45.0" prefWidth="72.0" text="大小" textFill="#4d4d4dc9" />
+   </children>
+</HBox>
